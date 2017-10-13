@@ -1,6 +1,10 @@
 //= require jquery
-//= require jquery.turbolinks
-//= require materialize
+//= require jquery_ujs
 //= require turbolinks
+//= require_tree .
 
+/* global $ */
 
+$(document).ready(function(){
+  $(".button-collapse").sideNav();
+});
