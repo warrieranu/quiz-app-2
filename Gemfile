@@ -36,6 +36,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 #For JQuery
 gem 'jquery-rails'
+#bootstrap
+gem 'bootstrap'
 
 
 group :development, :test do
