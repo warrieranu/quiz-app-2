@@ -38,6 +38,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'jquery-rails'
 #bootstrap
 gem 'bootstrap'
+gem 'omniauth-facebook'
 
 
 group :development, :test do
