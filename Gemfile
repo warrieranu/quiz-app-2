@@ -39,6 +39,7 @@ gem 'jquery-rails'
 #bootstrap
 gem 'bootstrap'
 gem 'omniauth-facebook'
+gem 'figaro'
 
 
 group :development, :test do

@@ -8,4 +8,19 @@ class User < ApplicationRecord
     has_secure_password
     validates :password, presence: true, length: { minimum: 6 }
     
+    def self.sign_in_from_omniauth(auth)
+        find_by(provider: auth['provider'], uid: auth['uid'] || create_user_from_omniauth)
+    end
+    
+    def create_user_from_omniauth(auth)
+        create(
+            provider: auth['provider'],
+            uid: auth['uid'],
+            name: auth['info']['name'],
+            email: auth['info']['email'],
+            password: SecureRandom.hex
+            
+            )
+    end
+    
 end
